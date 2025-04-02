@@ -1,133 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Restaurant Detail</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Restaurant Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container py-5">
-    <h2 id="resto-name" class="mb-4"></h2>
-    <p><strong>Description:</strong> <span id="resto-desc"></span></p>
-    <p><strong>Address:</strong> <span id="resto-address"></span></p>
-    <p><strong>Opening Hours:</strong> <span id="resto-hours"></span></p>
-    <p><strong>Reservation:</strong> <span id="resto-reservation"></span></p>
 
-    <h4 class="mt-5">How to go</h4>
-    <iframe id="resto-map" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+<!-- 顶部导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Go Asian</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
+        <li class="nav-item"><a class="nav-link" href="market.html">Supermarkets</a></li>
+        <li class="nav-item"><a class="nav-link" href="recipe.html">Recipes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 餐厅详情 -->
+<div class="container mt-4">
+  <div id="restaurant-detail">
+    <!-- 餐厅详细信息将通过 JS 动态加载 -->
+  </div>
 </div>
 
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
+<!-- 页脚 -->
+<footer class="bg-dark text-white text-center py-4">
+  <small>
+    <a href="legal.html#privacy" class="text-white me-2">Privacy Policy</a> |
+    <a href="legal.html#terms-sale" class="text-white mx-2">Terms of Sale</a> |
+    <a href="legal.html#terms-use" class="text-white mx-2">Website Terms of Use</a> |
+    <a href="legal.html#cookies" class="text-white mx-2">Cookies Policy</a>
+  </small>
+</footer>
 
-    const restaurants = {
-        1: {
-            name: "Tokyo Sushi",
-            description: "新鲜寿司、拉面、日式定食，适合学生日常聚餐。",
-            address: "Tiensestraat 45, Leuven",
-            hours: "Mon–Sun: 11:30–22:00",
-            reservation: "tokyo@restaurant.com / 012-345-678",
-            map: "https://www.google.com/maps/embed?pb=!1m18!xxx1"
-        },
-        2: {
-            name: "Chinatown Express",
-            description: "经典中餐外卖、川菜热炒、麻婆豆腐。",
-            address: "Naamsestraat 88, Leuven",
-            hours: "Mon–Sat: 12:00–21:00",
-            reservation: "chinatown@express.com / 012-999-000",
-            map: "https://www.google.com/maps/embed?pb=!1m18!xxx2"
-        }
-        3: {
-            name: "Seoul Garden",
-            description: "韩式烧烤、自助火锅，适合团体聚会。",
-            address: "Bondgenotenlaan 20, Leuven",
-            hours: "Tue–Sun: 12:00–22:00",
-            reservation: "seoul@garden.be / 012-111-222",
-            map: "https://www.google.com/maps/embed?pb=!1m18!seoul"
-        },
-        4: {
-            name: "Thai Smile",
-            description: "正宗泰国风味，特色冬阴功、绿咖喱。",
-            address: "Diestsestraat 60, Leuven",
-            hours: "Mon–Fri: 11:00–20:30",
-            reservation: "thai@smile.com / 012-333-444",
-            map: "https://www.google.com/maps/embed?pb=!1m18!thai"
-        },
-        5: {
-            name: "Wok Dynasty",
-            description: "亚洲自助餐厅，包含中式、日式、泰式菜系。",
-            address: "Martelarenlaan 12, Leuven",
-            hours: "Everyday: 12:00–22:00",
-            reservation: "wok@dynasty.be / 012-555-666",
-            map: "https://www.google.com/maps/embed?pb=!1m18!wok"
-        },
-        6: {
-            name: "Pho 21",
-            description: "越南河粉、春卷、牛肉汤等经典小吃。",
-            address: "Parkstraat 21, Leuven",
-            hours: "Tue–Sun: 12:00–21:00",
-            reservation: "pho21@viet.be / 012-777-888",
-            map: "https://www.google.com/maps/embed?pb=!1m18!pho"
-        },
-        7: {
-            name: "Little India",
-            description: "印度咖喱、烤饼、香料饭，素食选择丰富。",
-            address: "Brusselsestraat 77, Leuven",
-            hours: "Mon–Sun: 11:30–21:30",
-            reservation: "little@india.be / 012-000-123",
-            map: "https://www.google.com/maps/embed?pb=!1m18!india"
-        },
-        8: {
-            name: "Noodle House",
-            description: "手工拉面、炸酱面、泡菜面应有尽有。",
-            address: "Kapucijnenvoer 34, Leuven",
-            hours: "Wed–Mon: 11:00–20:00",
-            reservation: "noodle@house.com / 012-999-888",
-            map: "https://www.google.com/maps/embed?pb=!1m18!noodle"
-        },
-        9: {
-            name: "Dim Sum Palace",
-            description: "港式早茶、点心、烧麦虾饺种类齐全。",
-            address: "Maria Theresiastraat 5, Leuven",
-            hours: "Weekends: 09:30–15:00 / 17:00–21:00",
-            reservation: "dimsum@palace.be / 012-444-321",
-            map: "https://www.google.com/maps/embed?pb=!1m18!dimsum"
-        },
-        10: {
-            name: "Asian Fusion",
-            description: "融合日中韩泰菜式，主打创意料理和小吃。",
-            address: "Vaartstraat 10, Leuven",
-            hours: "Everyday: 12:00–22:00",
-            reservation: "fusion@asian.com / 012-876-543",
-            map: "https://www.google.com/maps/embed?pb=!1m18!fusion"
-        }
-    };
-
-
-    <!-- Google Map  注意⚠️ 这里要改成对应的-->
-    <section class="container my-5 text-center">
-        <h4>How to go</h4>
-        <div class="mt-3">
-            <!-- 替换为你的 Google Map API 嵌入代码 -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="350" style="border:0;" allowfullscreen loading="lazy"></iframe>
-        </div>
-    </section>
-
-
-    const resto = restaurants[id];
-
-    if (resto) {
-        document.getElementById("resto-name").textContent = resto.name;
-        document.getElementById("resto-desc").textContent = resto.description;
-        document.getElementById("resto-address").textContent = resto.address;
-        document.getElementById("resto-hours").textContent = resto.hours;
-        document.getElementById("resto-reservation").textContent = resto.reservation;
-        document.getElementById("resto-map").src = resto.map;
-    } else {
-        document.querySelector(".container").innerHTML = "<p>Restaurant not found.</p>";
-    }
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/renderRestaurantDetail.js"></script>
 </body>
 </html>
