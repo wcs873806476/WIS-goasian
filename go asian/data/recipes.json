@@ -1,0 +1,112 @@
+{
+  "1": {
+    "eid": "1",
+    "name": "Mapo Tofu",
+    "ingredients": ["Tofu", "Ground pork", "Chili bean paste", "Sichuan peppercorn"],
+    "instructions": "1. Stir-fry pork with sauce... 2. Add tofu and simmer...",
+    "media": {
+      "video_keywords": "mapo tofu recipe",
+      "default_video_embed": "https://www.youtube.com/embed/YFj3M71S3CQ"
+    },
+    "image": "mapotofu.jpg"
+  },
+  "2": {
+    "eid": "2",
+    "name": "Ramen",
+    "ingredients": ["Ramen noodles", "Egg", "Pork belly", "Soy sauce"],
+    "instructions": "1. Prepare broth... 2. Boil noodles... 3. Assemble toppings...",
+    "media": {
+      "video_keywords": "ramen recipe",
+      "default_video_embed": "https://www.youtube.com/embed/dYhI5pVEJek"
+    },
+    "image": "ramen.jpg"
+  },
+  "3": {
+    "eid": "3",
+    "name": "Kung Pao Chicken",
+    "ingredients": ["Chicken breast", "Peanuts", "Dried chili", "Soy sauce"],
+    "instructions": "1. Stir-fry chicken... 2. Add peanuts and sauce...",
+    "media": {
+      "video_keywords": "kung pao chicken recipe",
+      "default_video_embed": "https://www.youtube.com/embed/G3dY9B0KpI8"
+    },
+    "image": "kungpao.jpg"
+  },
+  "4": {
+    "eid": "4",
+    "name": "Beef Pho",
+    "ingredients": ["Beef bones", "Rice noodles", "Star anise", "Fish sauce"],
+    "instructions": "1. Simmer beef broth... 2. Cook noodles and serve...",
+    "media": {
+      "video_keywords": "pho recipe",
+      "default_video_embed": "https://www.youtube.com/embed/S46RrA-wfNc"
+    },
+    "image": "pho.jpg"
+  },
+  "5": {
+    "eid": "5",
+    "name": "Bibimbap",
+    "ingredients": ["Rice", "Egg", "Beef", "Gochujang"],
+    "instructions": "1. Prepare toppings... 2. Assemble over rice...",
+    "media": {
+      "video_keywords": "bibimbap recipe",
+      "default_video_embed": "https://www.youtube.com/embed/vWv9zD1SdjQ"
+    },
+    "image": "bibimbap.jpg"
+  },
+  "6": {
+    "eid": "6",
+    "name": "Tom Yum Soup",
+    "ingredients": ["Shrimp", "Lemongrass", "Lime leaves", "Chili paste"],
+    "instructions": "1. Boil broth... 2. Add shrimp and seasoning...",
+    "media": {
+      "video_keywords": "tom yum soup recipe",
+      "default_video_embed": "https://www.youtube.com/embed/8p9Fqwn-b68"
+    },
+    "image": "tomyum.jpg"
+  },
+  "7": {
+    "eid": "7",
+    "name": "Sushi Rolls",
+    "ingredients": ["Sushi rice", "Nori", "Salmon", "Cucumber"],
+    "instructions": "1. Spread rice on nori... 2. Add fillings and roll...",
+    "media": {
+      "video_keywords": "sushi rolls recipe",
+      "default_video_embed": "https://www.youtube.com/embed/pC3iPlyIt-8"
+    },
+    "image": "sushi.jpg"
+  },
+  "8": {
+    "eid": "8",
+    "name": "Pad Thai",
+    "ingredients": ["Rice noodles", "Tofu", "Peanuts", "Tamarind sauce"],
+    "instructions": "1. Stir-fry ingredients... 2. Add sauce and serve...",
+    "media": {
+      "video_keywords": "pad thai recipe",
+      "default_video_embed": "https://www.youtube.com/embed/m2lPz64U2xY"
+    },
+    "image": "padthai.jpg"
+  },
+  "9": {
+    "eid": "9",
+    "name": "Hainanese Chicken Rice",
+    "ingredients": ["Chicken", "Rice", "Ginger", "Soy sauce"],
+    "instructions": "1. Poach chicken... 2. Cook rice with broth...",
+    "media": {
+      "video_keywords": "hainanese chicken rice recipe",
+      "default_video_embed": "https://www.youtube.com/embed/25xuzTBhwPk"
+    },
+    "image": "hainanese.jpg"
+  },
+  "10": {
+    "eid": "10",
+    "name": "Kimchi Fried Rice",
+    "ingredients": ["Rice", "Kimchi", "Egg", "Gochujang"],
+    "instructions": "1. Stir-fry kimchi... 2. Add rice and sauce...",
+    "media": {
+      "video_keywords": "kimchi fried rice recipe",
+      "default_video_embed": "https://www.youtube.com/embed/8sU1mWZVbdI"
+    },
+    "image": "kimchi.jpg"
+  }
+}

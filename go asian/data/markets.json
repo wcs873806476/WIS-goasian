@@ -1,0 +1,72 @@
+{
+  "1": {
+    "sid": "1",
+    "name": "Wok Dynasty",
+    "location": {
+      "address": "Tiensesteenweg 128, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Wok+Dynasty+Leuven"
+    },
+    "details": {
+      "rating": 4.6,
+      "opening_hours": "Mon–Sun 11:30–22:00",
+      "specialties": ["Sushi", "Wok", "Buffet"]
+    },
+    "image": "wokdynasty.jpg"
+  },
+  "2": {
+    "sid": "2",
+    "name": "Noodle House",
+    "location": {
+      "address": "Naamsestraat 66, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Noodle+House+Leuven"
+    },
+    "details": {
+      "rating": 4.4,
+      "opening_hours": "Tue–Sun 12:00–21:30",
+      "specialties": ["Beef noodles", "Dumplings"]
+    },
+    "image": "noodlehouse.jpg"
+  },
+  "3": {
+    "sid": "3",
+    "name": "Szechuan Spice",
+    "location": {
+      "address": "Bondgenotenlaan 102, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Szechuan+Spice+Leuven"
+    },
+    "details": {
+      "rating": 4.5,
+      "opening_hours": "Mon–Sun 12:00–22:30",
+      "specialties": ["Hotpot", "Mapo Tofu"]
+    },
+    "image": "szechuan_spice.jpg"
+  },
+  "4": {
+    "sid": "4",
+    "name": "Tokyo Sushi",
+    "location": {
+      "address": "Diestsestraat 80, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Tokyo+Sushi+Leuven"
+    },
+    "details": {
+      "rating": 4.7,
+      "opening_hours": "Mon–Sun 11:00–22:00",
+      "specialties": ["Sushi", "Sashimi"]
+    },
+    "image": "tokyo_sushi.jpg"
+  },
+  "5": {
+    "sid": "5",
+    "name": "Golden Wok",
+    "location": {
+      "address": "Brusselsestraat 150, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Golden+Wok+Leuven"
+    },
+    "details": {
+      "rating": 4.3,
+      "opening_hours": "Wed–Sun 12:00–22:00",
+      "specialties": ["Wok", "Dim Sum"]
+    },
+    "image": "golden_wok.jpg"
+  }
+}

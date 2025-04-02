@@ -1,0 +1,142 @@
+{
+  "1": {
+    "rid": "1",
+    "name": "Wok Dynasty",
+    "location": {
+      "address": "Tiensesteenweg 128, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Wok+Dynasty+Leuven"
+    },
+    "details": {
+      "rating": 4.6,
+      "opening_hours": "Mon–Sun 11:30–22:00",
+      "specialties": ["Sushi", "Wok", "Buffet"]
+    },
+    "image": "wokdynasty.jpg"
+  },
+  "2": {
+    "rid": "2",
+    "name": "Noodle House",
+    "location": {
+      "address": "Naamsestraat 66, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Noodle+House+Leuven"
+    },
+    "details": {
+      "rating": 4.4,
+      "opening_hours": "Tue–Sun 12:00–21:30",
+      "specialties": ["Beef noodles", "Dumplings"]
+    },
+    "image": "noodlehouse.jpg"
+  },
+  "3": {
+    "rid": "3",
+    "name": "Szechuan Spice",
+    "location": {
+      "address": "Bondgenotenlaan 102, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Szechuan+Spice+Leuven"
+    },
+    "details": {
+      "rating": 4.5,
+      "opening_hours": "Mon–Sun 12:00–22:30",
+      "specialties": ["Hotpot", "Mapo Tofu"]
+    },
+    "image": "szechuan_spice.jpg"
+  },
+  "4": {
+    "rid": "4",
+    "name": "Tokyo Sushi",
+    "location": {
+      "address": "Diestsestraat 80, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Tokyo+Sushi+Leuven"
+    },
+    "details": {
+      "rating": 4.7,
+      "opening_hours": "Mon–Sun 11:00–22:00",
+      "specialties": ["Sushi", "Sashimi"]
+    },
+    "image": "tokyo_sushi.jpg"
+  },
+  "5": {
+    "rid": "5",
+    "name": "Golden Wok",
+    "location": {
+      "address": "Brusselsestraat 150, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Golden+Wok+Leuven"
+    },
+    "details": {
+      "rating": 4.3,
+      "opening_hours": "Wed–Sun 12:00–22:00",
+      "specialties": ["Wok", "Dim Sum"]
+    },
+    "image": "golden_wok.jpg"
+  },
+  "6": {
+    "rid": "6",
+    "name": "Thai Garden",
+    "location": {
+      "address": "Parijsstraat 50, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Thai+Garden+Leuven"
+    },
+    "details": {
+      "rating": 4.6,
+      "opening_hours": "Tue–Sun 12:00–22:00",
+      "specialties": ["Pad Thai", "Green Curry"]
+    },
+    "image": "thai_garden.jpg"
+  },
+  "7": {
+    "rid": "7",
+    "name": "Korean BBQ House",
+    "location": {
+      "address": "Tiensevest 45, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Korean+BBQ+House+Leuven"
+    },
+    "details": {
+      "rating": 4.8,
+      "opening_hours": "Mon–Sun 11:30–23:00",
+      "specialties": ["Korean BBQ", "Kimchi"]
+    },
+    "image": "korean_bbq_house.jpg"
+  },
+  "8": {
+    "rid": "8",
+    "name": "Pho Delight",
+    "location": {
+      "address": "Oude Markt 25, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Pho+Delight+Leuven"
+    },
+    "details": {
+      "rating": 4.5,
+      "opening_hours": "Tue–Sun 12:00–21:00",
+      "specialties": ["Pho", "Spring Rolls"]
+    },
+    "image": "pho_delight.jpg"
+  },
+  "9": {
+    "rid": "9",
+    "name": "Little India",
+    "location": {
+      "address": "Muntstraat 20, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Little+India+Leuven"
+    },
+    "details": {
+      "rating": 4.7,
+      "opening_hours": "Mon–Sun 12:00–22:30",
+      "specialties": ["Curry", "Naan"]
+    },
+    "image": "little_india.jpg"
+  },
+  "10": {
+    "rid": "10",
+    "name": "Bamboo Express",
+    "location": {
+      "address": "Bondgenotenlaan 180, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Bamboo+Express+Leuven"
+    },
+    "details": {
+      "rating": 4.2,
+      "opening_hours": "Mon–Sat 11:00–21:30",
+      "specialties": ["Fried Rice", "Sweet & Sour Chicken"]
+    },
+    "image": "bamboo_express.jpg"
+  }
+}
