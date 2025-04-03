@@ -27,7 +27,7 @@ function renderRestaurantDetail(restaurant) {
     const detailContainer = document.getElementById("restaurant-detail");
 
     // 生成 Google Maps 嵌入 URL
-    const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyDV5CG9qvLYeBPGfZWqRJpgYqa34U_Ld-o&q=${encodeURIComponent(restaurant.name)}`;
+    const googleMapsUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR-API&q=${encodeURIComponent(restaurant.name)}`;
 
     detailContainer.innerHTML = `
         <h1 class="mb-3">${restaurant.name}</h1>
