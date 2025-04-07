@@ -1,19 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     // 获取 URL 参数中的 'id'
     const urlParams = new URLSearchParams(window.location.search);
-    const recipeId = urlParams.get("id"); // 获取 URL 中的 id 参数
-    console.log("Recipe ID:", recipeId); // 调试信息
+    const recipeId = urlParams.get("id");
+    console.log("Recipe ID:", recipeId);
 
     // 获取菜谱数据并渲染
     fetch("data/recipes.json")
-        .then(response => response.json())  // 解析 JSON 数据
+        .then(response => response.json())
         .then(data => {
-            console.log("Recipe Data:", data); // 调试信息
-
-            // 根据 ID 获取对应的菜谱对象
+            console.log("Recipe Data:", data);
             const recipe = data[recipeId];
 
-            // 如果找到了菜谱数据，渲染详情页面，否则显示错误信息
             if (recipe) {
                 renderRecipeDetail(recipe);
             } else {
@@ -21,12 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("recipe-detail").innerHTML = "<h2>Recipe not found</h2>";
             }
         })
-        .catch(error => console.error("Error loading recipe data:", error));  // 错误处理
+        .catch(error => {
+            console.error("Error loading recipe data:", error);
+            document.getElementById("recipe-detail").innerHTML = "<h2>Error loading recipe data</h2>";
+        });
 });
 
-// 渲染菜谱详情的函数
 function renderRecipeDetail(recipe) {
-    // 确保菜谱数据存在
     if (!recipe) {
         document.getElementById("recipe-detail").innerHTML = "<h2>Recipe not found</h2>";
         return;
@@ -34,28 +32,47 @@ function renderRecipeDetail(recipe) {
 
     const detailContainer = document.getElementById("recipe-detail");
 
-    // 构建菜谱详情内容
+    // 渲染基本信息
     detailContainer.innerHTML = `
         <h1 class="mb-3">${recipe.name}</h1>
-        <img src="img/${recipe.image}" class="img-fluid mb-3" alt="${recipe.name}">
-        
+        <img src="assets/image/${recipe.image}" class="img-fluid mb-3" alt="${recipe.name}">
+
         <p class="mt-4"><strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}</p>
-        
+
         <p class="mt-3"><strong>Instructions:</strong></p>
         <p class="mt-2">${recipe.instructions}</p>
-        
-        <p class="mt-5"><strong>Cooking Video:</strong></p>
-        <div class="mt-3">
-            <iframe 
-                class="w-100" height="450" frameborder="0" style="border:0"
-                src="${recipe.media.default_video_embed}" allowfullscreen>
-            </iframe>
-        </div>
-        
-        <p class="mt-2">
-            <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(recipe.media.video_keywords)}" target="_blank">
-                Watch more related videos
-            </a>
-        </p>
     `;
+
+    // 调用 YouTube API 显示视频
+    const apiKey = "";
+    const query = recipe.media.video_keywords;
+    const maxResults = 1;
+
+    fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${maxResults}&q=${encodeURIComponent(query)}&key=${apiKey}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.items && data.items.length > 0) {
+                const videoId = data.items[0].id.videoId;
+
+                detailContainer.innerHTML += `
+                    <div class="mt-5">
+                        <iframe width="100%" height="450"
+                            src="https://www.youtube.com/embed/${videoId}"
+                            frameborder="0" allowfullscreen>
+                        </iframe>
+                        <p class="mt-3">
+                            <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(query)}" target="_blank">
+                                Watch more related videos on YouTube
+                            </a>
+                        </p>
+                    </div>
+                `;
+            } else {
+                detailContainer.innerHTML += `<p class="mt-4 text-muted">No video found for "${query}".</p>`;
+            }
+        })
+        .catch(err => {
+            console.error("YouTube API error:", err);
+            detailContainer.innerHTML += `<p class="mt-4 text-danger">Failed to load video.</p>`;
+        });
 }
