@@ -1,72 +1,72 @@
 {
   "1": {
     "sid": "1",
-    "name": "Wok Dynasty",
+    "name": "H Foods",
     "location": {
-      "address": "Tiensesteenweg 128, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Wok+Dynasty+Leuven"
-    },
-    "details": {
-      "rating": 4.6,
-      "opening_hours": "Mon–Sun 11:30–22:00",
-      "specialties": ["Sushi", "Wok", "Buffet"]
-    },
-    "image": "wokdynasty.jpg"
-  },
-  "2": {
-    "sid": "2",
-    "name": "Noodle House",
-    "location": {
-      "address": "Naamsestraat 66, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Noodle+House+Leuven"
-    },
-    "details": {
-      "rating": 4.4,
-      "opening_hours": "Tue–Sun 12:00–21:30",
-      "specialties": ["Beef noodles", "Dumplings"]
-    },
-    "image": "noodlehouse.jpg"
-  },
-  "3": {
-    "sid": "3",
-    "name": "Szechuan Spice",
-    "location": {
-      "address": "Bondgenotenlaan 102, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Szechuan+Spice+Leuven"
-    },
-    "details": {
-      "rating": 4.5,
-      "opening_hours": "Mon–Sun 12:00–22:30",
-      "specialties": ["Hotpot", "Mapo Tofu"]
-    },
-    "image": "szechuan_spice.jpg"
-  },
-  "4": {
-    "sid": "4",
-    "name": "Tokyo Sushi",
-    "location": {
-      "address": "Diestsestraat 80, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Tokyo+Sushi+Leuven"
+      "address": "Brusselsestraat 110, 3000 Leuven, Belgium",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=H+Foods+Leuven"
     },
     "details": {
       "rating": 4.7,
-      "opening_hours": "Mon–Sun 11:00–22:00",
-      "specialties": ["Sushi", "Sashimi"]
+      "opening_hours": "Mon Closed, Tue–Sat 10:00–19:00, Sun 13:00–21:30",
+      "specialties": ["Frozen dumplings", "Asian sauces", "Chinese snacks"]
     },
-    "image": "tokyo_sushi.jpg"
+    "image": "market_hfoods.jpg"
+  },
+  "2": {
+    "sid": "2",
+    "name": "Asian Supermarket",
+    "location": {
+      "address": "Brusselsestraat 114, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Asian+Supermarket+Leuven"
+    },
+    "details": {
+      "rating": 4.2,
+      "opening_hours": "Mon–Sun 10:00–20:00",
+      "specialties": ["Rice", "Indian food"]
+    },
+    "image": "market_asiansupermarket.jpg"
+  },
+  "3": {
+    "sid": "3",
+    "name": "Circle",
+    "location": {
+      "address": "Brusselsestraat 48, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Circle+Leuven"
+    },
+    "details": {
+      "rating": 4.5,
+      "opening_hours": "Mon–Sun 10:00–20:00",
+      "specialties": ["Asian grocery"]
+    },
+    "image": "market_circle.jpg"
+  },
+  "4": {
+    "sid": "4",
+    "name": "Asia & More",
+    "location": {
+      "address": "Aarschotsesteenweg 92, 3012 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Asia+%26+More+Leuven"
+    },
+    "details": {
+      "rating": 4.6,
+      "opening_hours": "Sun–Mon 13:00–19:00, Tue-Sat 9:00-19:00",
+      "specialties": ["Intant noodles", "Soy sauce"]
+    },
+    "image": "market_asiamore.jpg"
   },
   "5": {
     "sid": "5",
-    "name": "Golden Wok",
+    "name": "Everest House",
     "location": {
-      "address": "Brusselsestraat 150, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Golden+Wok+Leuven"
+      "address": "Brusselsestraat 128, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Everest+House+Leuven"
     },
     "details": {
-      "rating": 4.3,
-      "opening_hours": "Wed–Sun 12:00–22:00",
-      "specialties": ["Wok", "Dim Sum"]
+      "rating": 4.5,
+      "opening_hours": "Mon–Sun 9:00–20:00",
+      "specialties": ["Indian spices"]
     },
-    "image": "golden_wok.jpg"
+    "image": "market_everesthouse.jpg"
   }
 }
