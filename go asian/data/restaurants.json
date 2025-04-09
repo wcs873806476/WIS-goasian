@@ -1,73 +1,73 @@
 {
   "1": {
     "rid": "1",
-    "name": "Wok Dynasty",
+    "name": "Mama Wong",
     "location": {
-      "address": "Tiensesteenweg 128, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Wok+Dynasty+Leuven"
+      "address": "Naamsesteenweg 178, 3001 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Mama+Wong+Leuven"
     },
     "details": {
-      "rating": 4.6,
-      "opening_hours": "Mon–Sun 11:30–22:00",
-      "specialties": ["Sushi", "Wok", "Buffet"]
+      "rating": 4.2,
+      "opening_hours": "Mon Closed, Tue–Fri & Sun 12:00-14:00 & 17:30-22:00, Sat 17:30-22:00",
+      "specialties": ["Chinese food"]
     },
-    "image": "wokdynasty.jpg"
+    "image": "restaurant_mamawong.jpg"
   },
   "2": {
     "rid": "2",
-    "name": "Noodle House",
+    "name": "Kong Fu Ge",
     "location": {
-      "address": "Naamsestraat 66, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Noodle+House+Leuven"
-    },
-    "details": {
-      "rating": 4.4,
-      "opening_hours": "Tue–Sun 12:00–21:30",
-      "specialties": ["Beef noodles", "Dumplings"]
-    },
-    "image": "noodlehouse.jpg"
-  },
-  "3": {
-    "rid": "3",
-    "name": "Szechuan Spice",
-    "location": {
-      "address": "Bondgenotenlaan 102, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Szechuan+Spice+Leuven"
+      "address": "Hendrik Consciencestraat 27, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Kong+Fu+Ge+Leuven"
     },
     "details": {
       "rating": 4.5,
-      "opening_hours": "Mon–Sun 12:00–22:30",
-      "specialties": ["Hotpot", "Mapo Tofu"]
+      "opening_hours": "Mon & Wed–Sat 17:00-21:30, Tue Closed, Sun 12:00-14:00 & 17:00-21:30",
+      "specialties": ["Duck", "Babi panggang", "Chicken Soup"]
     },
-    "image": "szechuan_spice.jpg"
+    "image": "restaurant_kongfuge.jpg"
   },
-  "4": {
-    "rid": "4",
-    "name": "Tokyo Sushi",
+  "3": {
+    "rid": "3",
+    "name": "Intertaste Leuven",
     "location": {
-      "address": "Diestsestraat 80, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Tokyo+Sushi+Leuven"
+      "address": "Parijsstraat 7, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Intertaste+Leuven"
     },
     "details": {
       "rating": 4.7,
-      "opening_hours": "Mon–Sun 11:00–22:00",
-      "specialties": ["Sushi", "Sashimi"]
+      "opening_hours": "Mon Closed, Tue–Sat 12:00-15:00 & 17:00-22:00, Sun 12:00-15:00 & 17:00-21:00",
+      "specialties": ["Tingmo", "Dumplings"]
     },
-    "image": "tokyo_sushi.jpg"
+    "image": "restaurant_intertasteleuven.jpg"
+  },
+  "4": {
+    "rid": "4",
+    "name": "Bánh Mì Chhen",
+    "location": {
+      "address": "Brusselsestraat 47, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Banh+Mi+Chhen+Leuven"
+    },
+    "details": {
+      "rating": 5.0,
+      "opening_hours": "Mon–Fri 11:30-14:30 & 17:00-21:00, Sat 11:30-14:30 & 17:00-21:30, Sun Closed",
+      "specialties": ["Nepalese food", "Vietnamese food"]
+    },
+    "image": "restaurant_banhmichhen.jpg"
   },
   "5": {
     "rid": "5",
-    "name": "Golden Wok",
+    "name": "Asian Bowl",
     "location": {
-      "address": "Brusselsestraat 150, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Golden+Wok+Leuven"
+      "address": "Parijsstraat 18, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Asian+Bowl+Leuven"
     },
     "details": {
-      "rating": 4.3,
-      "opening_hours": "Wed–Sun 12:00–22:00",
-      "specialties": ["Wok", "Dim Sum"]
+      "rating": 4.6,
+      "opening_hours": "Mon–Sun 11:30-14:30 & 17:00-21:30",
+      "specialties": ["Rice bowls", "Noodle soups"]
     },
-    "image": "golden_wok.jpg"
+    "image": "restaurant_asianbowl.jpg"
   },
   "6": {
     "rid": "6",
