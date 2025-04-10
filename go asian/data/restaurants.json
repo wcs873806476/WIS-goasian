@@ -71,72 +71,72 @@
   },
   "6": {
     "rid": "6",
-    "name": "Thai Garden",
+    "name": "Samourai Sushi",
     "location": {
-      "address": "Parijsstraat 50, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Thai+Garden+Leuven"
+      "address": "Muntstraat 9, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Samourai+Sushi+Leuven"
     },
     "details": {
-      "rating": 4.6,
-      "opening_hours": "Tue–Sun 12:00–22:00",
-      "specialties": ["Pad Thai", "Green Curry"]
+      "rating": 4.3,
+      "opening_hours": "Mon–Sun 12:00-14:30 & 17:00-22:30",
+      "specialties": ["Sushi"]
     },
-    "image": "thai_garden.jpg"
+    "image": "restaurant_samouraisushi.jpg"
   },
   "7": {
     "rid": "7",
-    "name": "Korean BBQ House",
+    "name": "Khin",
     "location": {
-      "address": "Tiensevest 45, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Korean+BBQ+House+Leuven"
+      "address": "Naamsesteenweg 192, 3001 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Khin+Leuven"
     },
     "details": {
-      "rating": 4.8,
-      "opening_hours": "Mon–Sun 11:30–23:00",
-      "specialties": ["Korean BBQ", "Kimchi"]
+      "rating": 4.4,
+      "opening_hours": "Mon–Sun 17:30–22:00",
+      "specialties": ["Pad Thai", "Curry"]
     },
-    "image": "korean_bbq_house.jpg"
+    "image": "restaurant_khin.jpg"
   },
   "8": {
     "rid": "8",
-    "name": "Pho Delight",
+    "name": "Thai Time",
     "location": {
-      "address": "Oude Markt 25, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Pho+Delight+Leuven"
-    },
-    "details": {
-      "rating": 4.5,
-      "opening_hours": "Tue–Sun 12:00–21:00",
-      "specialties": ["Pho", "Spring Rolls"]
-    },
-    "image": "pho_delight.jpg"
-  },
-  "9": {
-    "rid": "9",
-    "name": "Little India",
-    "location": {
-      "address": "Muntstraat 20, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Little+India+Leuven"
+      "address": "Tiensestraat 123, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Thai+Time+Leuven"
     },
     "details": {
       "rating": 4.7,
-      "opening_hours": "Mon–Sun 12:00–22:30",
-      "specialties": ["Curry", "Naan"]
+      "opening_hours": "Sun–Mon Closed, Tue-Fri 11:00-14:00 & 17:00-21:00, Sat 17:00-21:00",
+      "specialties": ["Red Curry", "Spring Rolls"]
     },
-    "image": "little_india.jpg"
+    "image": "restaurant_thaitime.jpg"
+  },
+  "9": {
+    "rid": "9",
+    "name": "Leuven Chicken Rice",
+    "location": {
+      "address": "Next to Fuji Sushi, Tiensestraat 121, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Leuven+Chicken+Rice+Leuven"
+    },
+    "details": {
+      "rating": 4.8,
+      "opening_hours": "Mon–Fri 11:30–20:30, Sat-Sun Closed",
+      "specialties": ["Malaysian chicken", "Teh tarik"]
+    },
+    "image": "restaurant_leuvenchickenrice.jpg"
   },
   "10": {
     "rid": "10",
-    "name": "Bamboo Express",
+    "name": "Raffat",
     "location": {
-      "address": "Bondgenotenlaan 180, 3000 Leuven",
-      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Bamboo+Express+Leuven"
+      "address": "Naamsestraat 45, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=API_KEY&q=Raffat+Leuven"
     },
     "details": {
-      "rating": 4.2,
-      "opening_hours": "Mon–Sat 11:00–21:30",
-      "specialties": ["Fried Rice", "Sweet & Sour Chicken"]
+      "rating": 4.6,
+      "opening_hours": "Mon & Wed-Sun 17:30–22:00, Tue Closed",
+      "specialties": ["Pakistani food", "Pakistani tapas"]
     },
-    "image": "bamboo_express.jpg"
+    "image": "restaurant_raffat.jpg"
   }
 }
