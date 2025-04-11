@@ -35,7 +35,7 @@ function renderRecipeDetail(recipe) {
     // 渲染基本信息
     detailContainer.innerHTML = `
         <h1 class="mb-3">${recipe.name}</h1>
-        <img src="assets/image/${recipe.image}" class="img-fluid mb-3" alt="${recipe.name}">
+        <img src="images/${recipe.image}" class="img-fluid mb-3" alt="${recipe.name}">
 
         <p class="mt-4"><strong>Ingredients:</strong> ${recipe.ingredients.join(", ")}</p>
 
