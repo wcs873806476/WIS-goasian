@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetch("data/recipes.json")
         .then(response => response.json())
-        .then(data => renderRecipes(data)) // 
+        .then(data => renderRecipes(data)) 
         .catch(error => console.error("Error loading recipe data:", error));
 });
 
