@@ -26,3 +26,51 @@ body {
     padding: 10px 20px;
     border-radius: 10px;
 }
+
+.detail-img {
+    width: 100%;
+    max-width: 400px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.map-iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.market-page .card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.market-page .card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.restaurant-page .card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-page .card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.recipe-page .card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-page .card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    cursor: pointer;
+}
