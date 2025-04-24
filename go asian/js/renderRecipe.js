@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetch("data/recipes.json")
         .then(response => response.json())
-        .then(data => renderRecipes(data)) // 这里改成 renderMarkets
+        .then(data => renderRecipes(data)) // 
         .catch(error => console.error("Error loading recipe data:", error));
 });
 
 function renderRecipes(data) {
-    const container = document.getElementById("recipe-list"); // 选择存放卡片的父容器
-    container.innerHTML = ""; // 清空已有内容，防止重复加载
+    const container = document.getElementById("recipe-list"); 
+    container.innerHTML = ""; 
 
     const rowDiv = document.createElement("div");
-    rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3"); // Bootstrap 自适应网格
+    rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3"); 
     container.appendChild(rowDiv);
 
     Object.values(data).forEach(recipe => {
         const recipeCard = document.createElement("div");
-        recipeCard.classList.add("col-md-3", "mb-3"); // 让每行 4 个菜谱
+        recipeCard.classList.add("col-md-3", "mb-3"); 
 
         recipeCard.innerHTML = `
             <a href="recipe_detail.html?id=${recipe.eid}" class="text-decoration-none text-dark">
-               <div class="card h-100" style="min-height: 350px;"> <!-- 设置最小高度 -->
+               <div class="card h-100" style="min-height: 350px;"> 
                     <img src="img/${recipe.image}" class="card-img-top" alt="${recipe.name}" 
                     style="width: 100%; height: 200px; object-fit: cover;">
                     <div class="card-body text-center">
@@ -31,6 +31,6 @@ function renderRecipes(data) {
             </a> 
          `;
 
-        rowDiv.appendChild(recipeCard); // 让菜谱卡片正确加入 `.row`
+        rowDiv.appendChild(recipeCard); 
     });
 }
