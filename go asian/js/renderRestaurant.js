@@ -24,7 +24,7 @@ function renderRestaurants(data) {
                     style="width: 150px; height: auto; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title">${restaurant.name}</h5>
-                        <p class="text-muted">⭐ ${restaurant.details.rating}</p>
+                        ${renderGoogleStyleRating(restaurant.details.rating)}
                         <p class="card-text">${restaurant.details.specialties.join(", ")}</p>
                         <p class="text-muted">${restaurant.location.address}</p>
                         <p class="text-muted">${restaurant.details.opening_hours}</p>
@@ -35,4 +35,34 @@ function renderRestaurants(data) {
 
         rowDiv.appendChild(restaurantCard);
     });
+}
+
+// ⭐ 星级渲染函数
+function renderGoogleStyleRating(score) {
+    const fullStar = '<i class="bi bi-star-fill text-warning"></i>';
+    const halfStar = '<i class="bi bi-star-half text-warning"></i>';
+    const emptyStar = '<i class="bi bi-star text-warning"></i>';
+
+    let full = Math.floor(score);
+    const decimal = score - full;
+
+    let half = false;
+    if (decimal >= 0.75) {
+        full += 1;
+    } else if (decimal >= 0.25) {
+        half = true;
+    }
+
+    const empty = 5 - full - (half ? 1 : 0);
+
+    let stars = fullStar.repeat(full);
+    if (half) stars += halfStar;
+    stars += emptyStar.repeat(empty);
+
+    return `
+        <div class="d-flex align-items-center gap-1 mb-1">
+            <span class="fw-semibold text-dark">${score.toFixed(1)}</span>
+            <span>${stars}</span>
+        </div>
+    `;
 }
