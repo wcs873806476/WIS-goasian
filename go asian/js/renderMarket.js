@@ -1,7 +1,24 @@
+let allMarkets = [];
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch("data/markets.json")
         .then(response => response.json())
-        .then(data => renderMarkets(data))
+        .then(data => {
+            allMarkets = Object.values(data);
+            renderMarkets(allMarkets);
+
+            // 监听搜索栏输入
+            const searchInput = document.getElementById("searchInput");
+            searchInput.addEventListener("input", () => {
+                const query = searchInput.value.toLowerCase();
+                const filtered = allMarkets.filter(market =>
+                    market.name.toLowerCase().includes(query) ||
+                    market.location.address.toLowerCase().includes(query) ||
+                    market.details.specialties.join(", ").toLowerCase().includes(query)
+                );
+                renderMarkets(filtered);
+            });
+        })
         .catch(error => console.error("Error loading market data:", error));
 });
 
@@ -13,7 +30,7 @@ function renderMarkets(data) {
     rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3");
     container.appendChild(rowDiv);
 
-    Object.values(data).forEach(market => {
+    data.forEach(market => {
         const marketCard = document.createElement("div");
         marketCard.classList.add("col");
 
@@ -32,12 +49,11 @@ function renderMarkets(data) {
                 </div>
             </a>
         `;
-
         rowDiv.appendChild(marketCard);
     });
 }
 
-// ⭐ 星级渲染函数
+// 星级评分渲染函数
 function renderGoogleStyleRating(score) {
     const fullStar = '<i class="bi bi-star-fill text-warning"></i>';
     const halfStar = '<i class="bi bi-star-half text-warning"></i>';
