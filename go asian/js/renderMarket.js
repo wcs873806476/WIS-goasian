@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
             allMarkets = Object.values(data);
             renderMarkets(allMarkets);
 
-            // 监听搜索栏输入
             const searchInput = document.getElementById("searchInput");
             searchInput.addEventListener("input", () => {
                 const query = searchInput.value.toLowerCase();
@@ -24,7 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function renderMarkets(data) {
     const container = document.getElementById("market-list");
+    const noResult = document.getElementById("no-result");
     container.innerHTML = "";
+
+    if (data.length === 0) {
+        noResult.style.display = "block";
+        return;
+    } else {
+        noResult.style.display = "none";
+    }
 
     const rowDiv = document.createElement("div");
     rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3");
@@ -53,7 +60,6 @@ function renderMarkets(data) {
     });
 }
 
-// 星级评分渲染函数
 function renderGoogleStyleRating(score) {
     const fullStar = '<i class="bi bi-star-fill text-warning"></i>';
     const halfStar = '<i class="bi bi-star-half text-warning"></i>';
