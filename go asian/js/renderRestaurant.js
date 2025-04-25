@@ -1,19 +1,42 @@
+let restaurantData = []; // 保存原始数据，供搜索过滤使用
+
 document.addEventListener("DOMContentLoaded", function () {
     fetch("data/restaurants.json")
         .then(response => response.json())
-        .then(data => renderRestaurants(data))
+        .then(data => {
+            restaurantData = Object.values(data); // 存储数据到全局变量
+            renderRestaurants(restaurantData);     // 初始渲染所有餐厅
+        })
         .catch(error => console.error("Error loading restaurant data:", error));
+
+    // 添加搜索监听器
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        searchInput.addEventListener("input", function () {
+            const keyword = this.value.toLowerCase().trim();
+            const filtered = restaurantData.filter(restaurant =>
+                restaurant.name.toLowerCase().includes(keyword) ||
+                restaurant.details.specialties.join(", ").toLowerCase().includes(keyword)
+            );
+            renderRestaurants(filtered); // 重新渲染筛选后的餐厅
+        });
+    }
 });
 
 function renderRestaurants(data) {
-    const container = document.getElementById("restaurant-list"); // 选择存放卡片的父容器
-    container.innerHTML = ""; // 清空已有内容
+    const container = document.getElementById("restaurant-list");
+    container.innerHTML = "";
 
     const rowDiv = document.createElement("div");
-    rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3"); // Bootstrap 自适应网格
+    rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3");
     container.appendChild(rowDiv);
 
-    Object.values(data).forEach(restaurant => {
+    if (data.length === 0) {
+        container.innerHTML = `<p class="text-center text-muted">No matching restaurants found.</p>`;
+        return;
+    }
+
+    data.forEach(restaurant => {
         const restaurantCard = document.createElement("div");
         restaurantCard.classList.add("col");
 
