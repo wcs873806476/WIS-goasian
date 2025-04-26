@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Asian - Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Go Asian</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
+                <li class="nav-item"><a class="nav-link" href="market.html">Supermarkets</a></li>
+                <li class="nav-item"><a class="nav-link" href="recipe.html">Recipes</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 欢迎区 -->
+<section class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div>
+        <h1 class="display-3">Welcome to<br><span class="fw-bold">go Asia</span></h1>
+        <p class="lead">Discover your favorite Asian food in Leuven</p>
+    </div>
+</section>
+
+<!-- 信息卡片区（用图片+链接跳转） -->
+<section class="container my-5 homepage-cards">
+    <div class="row text-center">
+        <div class="col-md-4 mb-3">
+            <a href="market.html" class="text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/market.jpg" class="card-img-top rounded" alt="Supermarkets"
+                         style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Explore Supermarkets</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="restaurant.html" class="text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/restaurant.jpg" class="card-img-top rounded" alt="Restaurants"
+                         style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Find Restaurants</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 mb-3">
+            <a href="recipe.html" class="text-decoration-none">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/recipe.jpg" class="card-img-top rounded" alt="Recipes"
+                         style="width: 100%; height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Try Recipes</h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- 三项并列区域 -->
+<section class="bg-light py-3">
+    <div class="container">
+        <div class="row text-center">
+
+            <!-- Follow us -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="mb-2">Follow us</h6>
+                <a href="involve.html#follow" class="text-dark text-decoration-none">Please follow us</a>
+            </div>
+
+            <!-- Join us -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="mb-2">Join us</h6>
+                <a href="involve.html#join" class="text-dark text-decoration-none">Become a member</a>
+            </div>
+
+            <!-- Support us -->
+            <div class="col-md-4">
+                <h6 class="mb-2">Support us</h6>
+                <a href="involve.html#support" class="text-dark text-decoration-none">Ways to support</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white text-center py-4">
+    <small>
+        <a href="legal.html#privacy" class="text-white me-2">Privacy Policy</a> |
+        <a href="legal.html#terms-sale" class="text-white mx-2">Terms of Sale</a> |
+        <a href="legal.html#terms-use" class="text-white mx-2">Website Terms of Use</a> |
+        <a href="legal.html#cookies" class="text-white mx-2">Cookies Policy</a>
+    </small>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

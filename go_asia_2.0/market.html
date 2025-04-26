@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Asian - Supermarkets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="market-page">
+
+<!-- 顶部导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Go Asian</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
+                <li class="nav-item"><a class="nav-link active" href="market.html">Supermarkets</a></li>
+                <li class="nav-item"><a class="nav-link" href="recipe.html">Recipes</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 标题 -->
+<header class="text-center py-5 bg-light">
+    <div class="container">
+        <h1 class="display-5">Leuven's Asian Supermarkets</h1>
+        <p class="lead">Discover where to shop for your favorite Asian ingredients in Leuven.</p>
+    </div>
+</header>
+
+<!-- 搜索栏 -->
+<div class="container mt-4">
+    <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-search"></i></span> <!-- 放大镜图标 -->
+        <input type="text" id="searchInput" class="form-control" placeholder="Search markets..." aria-label="Search restaurants">
+    </div>
+</div>
+
+<!-- 超市信息区 -->
+<div class="container mt-4">
+    <div class="row" id="market-list">
+        <!-- JavaScript 动态插入超市卡片 -->
+    </div>
+</div>
+
+<p id="no-result" class="text-center text-muted mt-4" style="display: none;">
+    No matching supermarket found.
+</p>
+
+<!-- 增加空白间隔 -->
+<div class="my-5"></div>
+
+<!-- 三项并列区域 -->
+<section class="bg-light py-3">
+    <div class="container">
+        <div class="row text-center">
+            <!-- Follow us -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="mb-2">Follow us</h6>
+                <a href="involve.html#follow" class="text-dark text-decoration-none">Please follow us</a>
+            </div>
+
+            <!-- Join us -->
+            <div class="col-md-4 mb-3 mb-md-0">
+                <h6 class="mb-2">Join us</h6>
+                <a href="involve.html#join" class="text-dark text-decoration-none">Become a member</a>
+            </div>
+
+            <!-- Support us -->
+            <div class="col-md-4">
+                <h6 class="mb-2">Support us</h6>
+                <a href="involve.html#support" class="text-dark text-decoration-none">Ways to support</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white text-center py-4">
+    <small>
+        <a href="legal.html#privacy" class="text-white me-2">Privacy Policy</a> |
+        <a href="legal.html#terms-sale" class="text-white mx-2">Terms of Sale</a> |
+        <a href="legal.html#terms-use" class="text-white mx-2">Website Terms of Use</a> |
+        <a href="legal.html#cookies" class="text-white mx-2">Cookies Policy</a>
+    </small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- renderMarket.js -->
+<script src="js/renderMarket.js"></script>
+
+
+</body>
+</html>

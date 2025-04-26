@@ -1,0 +1,112 @@
+{
+  "1": {
+    "eid": "1",
+    "name": "Mapo Tofu",
+    "ingredients": ["Tofu", "Ground pork", "Chili bean paste", "Sichuan peppercorn"],
+    "instructions": "1. Heat oil in a wok and stir-fry ground pork until browned. 2. Add garlic, ginger, and chili bean paste, stir until fragrant. 3. Pour in broth and bring to a boil. 4. Gently add cubed tofu and simmer for 5–7 minutes. 5. Add cornstarch slurry to thicken the sauce. 6. Sprinkle with Sichuan peppercorn powder and chopped green onions before serving.",
+    "media": {
+      "video_keywords": "mapo tofu recipe",
+      "default_video_embed": "https://www.youtube.com/embed/YFj3M71S3CQ"
+    },
+    "image": "recipe_mapotofu.jpg"
+  },
+  "2": {
+    "eid": "2",
+    "name": "Ramen",
+    "ingredients": ["Ramen noodles", "Egg", "Pork belly", "Soy sauce"],
+    "instructions": "1. Simmer pork bones and aromatics for several hours to make broth. 2. Season broth with soy sauce and miso or tare. 3. Boil ramen noodles until just tender, then drain. 4. Prepare toppings like soft-boiled eggs, chashu pork, and seaweed. 5. Assemble noodles in bowls, pour over broth, and add toppings.",
+    "media": {
+      "video_keywords": "ramen recipe",
+      "default_video_embed": "https://www.youtube.com/embed/dYhI5pVEJek"
+    },
+    "image": "recipe_ramen.jpg"
+  },
+  "3": {
+    "eid": "3",
+    "name": "Kung Pao Chicken",
+    "ingredients": ["Chicken breast", "Peanuts", "Dried chili", "Soy sauce"],
+    "instructions": "1. Dice chicken and marinate with soy sauce, rice wine, and cornstarch. 2. Stir-fry dried chili peppers and Sichuan peppercorns in oil. 3. Add chicken and cook until browned. 4. Stir in garlic, ginger, and green onions. 5. Add sauce made from vinegar, soy sauce, sugar, and cornstarch. 6. Toss in roasted peanuts and mix well before serving.",
+    "media": {
+      "video_keywords": "kung pao chicken recipe",
+      "default_video_embed": "https://www.youtube.com/embed/G3dY9B0KpI8"
+    },
+    "image": "recipe_kungpao.jpg"
+  },
+  "4": {
+    "eid": "4",
+    "name": "Beef Pho",
+    "ingredients": ["Beef bones", "Rice noodles", "Star anise", "Fish sauce"],
+    "instructions": "1. Char onions and ginger, then simmer with beef bones, star anise, cinnamon, and spices for several hours. 2. Strain the broth and season with fish sauce. 3. Soak rice noodles in warm water, then boil briefly. 4. Slice raw beef thinly. 5. In a bowl, add noodles, raw beef, and pour hot broth over it to cook the beef. 6. Garnish with herbs, bean sprouts, lime, and chili.",
+    "media": {
+      "video_keywords": "pho recipe",
+      "default_video_embed": "https://www.youtube.com/embed/S46RrA-wfNc"
+    },
+    "image": "recipe_pho.jpg"
+  },
+  "5": {
+    "eid": "5",
+    "name": "Bibimbap",
+    "ingredients": ["Rice", "Egg", "Beef", "Gochujang"],
+    "instructions": "1. Cook rice and set aside. 2. Sauté spinach, carrots, zucchini, mushrooms, and bean sprouts separately with sesame oil and salt. 3. Fry a sunny-side-up egg. 4. Cook seasoned beef until browned. 5. In a bowl, add rice, arrange vegetables and beef on top. 6. Top with the egg and a spoonful of gochujang. Mix before eating.",
+    "media": {
+      "video_keywords": "bibimbap recipe",
+      "default_video_embed": "https://www.youtube.com/embed/vWv9zD1SdjQ"
+    },
+    "image": "recipe_bibimbap.jpg"
+  },
+  "6": {
+    "eid": "6",
+    "name": "Tom Yum Soup",
+    "ingredients": ["Shrimp", "Lemongrass", "Lime leaves", "Chili paste"],
+    "instructions": "1. Boil water with lemongrass, lime leaves, galangal, and shallots to make broth. 2. Add mushrooms, tomatoes, and shrimp. 3. Season with fish sauce, lime juice, and chili paste. 4. Simmer until shrimp are cooked. 5. Serve hot with fresh cilantro and optional chili oil.",
+    "media": {
+      "video_keywords": "tom yum soup recipe",
+      "default_video_embed": "https://www.youtube.com/embed/8p9Fqwn-b68"
+    },
+    "image": "recipe_tomyum.jpg"
+  },
+  "7": {
+    "eid": "7",
+    "name": "Sushi Rolls",
+    "ingredients": ["Sushi rice", "Nori", "Salmon", "Cucumber"],
+    "instructions": "1. Cook and season sushi rice with vinegar, sugar, and salt. 2. Lay a sheet of nori on a bamboo mat, spread rice evenly. 3. Place fillings like salmon, cucumber, and avocado across the center. 4. Roll tightly using the mat. 5. Slice into bite-sized pieces and serve with soy sauce, wasabi, and pickled ginger.",
+    "media": {
+      "video_keywords": "sushi rolls recipe",
+      "default_video_embed": "https://www.youtube.com/embed/pC3iPlyIt-8"
+    },
+    "image": "recipe_sushi.jpg"
+  },
+  "8": {
+    "eid": "8",
+    "name": "Pad Thai",
+    "ingredients": ["Rice noodles", "Tofu", "Peanuts", "Tamarind sauce"],
+    "instructions": "1. Soak rice noodles in warm water until soft, then drain. 2. Stir-fry tofu, garlic, and shallots in oil. 3. Add noodles and pour in sauce made of tamarind paste, fish sauce, and sugar. 4. Push noodles to one side and scramble eggs on the other side of the pan. 5. Mix everything, add bean sprouts and chives. 6. Garnish with crushed peanuts and lime wedges.",
+    "media": {
+      "video_keywords": "pad thai recipe",
+      "default_video_embed": "https://www.youtube.com/embed/m2lPz64U2xY"
+    },
+    "image": "recipe_padthai.jpg"
+  },
+  "9": {
+    "eid": "9",
+    "name": "Hainanese Chicken Rice",
+    "ingredients": ["Chicken", "Rice", "Ginger", "Soy sauce"],
+    "instructions": "1. Poach whole chicken gently in water with garlic and ginger. 2. Cook rice using the chicken broth with garlic and shallots. 3. Prepare dipping sauces (chili, ginger-scallion, soy). 4. Slice poached chicken and serve over rice. 5. Garnish with cucumber slices and coriander. Serve with broth on the side.",
+    "media": {
+      "video_keywords": "hainanese chicken rice recipe",
+      "default_video_embed": "https://www.youtube.com/embed/25xuzTBhwPk"
+    },
+    "image": "recipe_hainanese.jpg"
+  },
+  "10": {
+    "eid": "10",
+    "name": "Kimchi Fried Rice",
+    "ingredients": ["Rice", "Kimchi", "Egg", "Gochujang"],
+    "instructions": "1. Sauté chopped kimchi with garlic and gochujang in oil. 2. Add day-old rice and stir-fry until evenly mixed and heated. 3. Stir in soy sauce and sesame oil. 4. Top with a fried egg and sprinkle with green onions and sesame seeds.",
+    "media": {
+      "video_keywords": "kimchi fried rice recipe",
+      "default_video_embed": "https://www.youtube.com/embed/8sU1mWZVbdI"
+    },
+    "image": "recipe_kimchi.jpg"
+  }
+}
