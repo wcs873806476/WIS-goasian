@@ -1,0 +1,72 @@
+{
+  "1": {
+    "sid": "1",
+    "name": "H Foods",
+    "location": {
+      "address": "Brusselsestraat 110, 3000 Leuven, Belgium",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=H+Foods+Leuven"
+    },
+    "details": {
+      "rating": 4.7,
+      "opening_hours": "Mon Closed, Tue–Sat 10:00–19:00, Sun 13:00–21:30",
+      "specialties": ["Frozen dumplings", "Asian sauces", "Chinese snacks"]
+    },
+    "image": "market_hfoods.jpg"
+  },
+  "2": {
+    "sid": "2",
+    "name": "Asian Supermarket",
+    "location": {
+      "address": "Brusselsestraat 114, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Asian+Supermarket+Leuven"
+    },
+    "details": {
+      "rating": 4.2,
+      "opening_hours": "Mon–Sun 10:00–20:00",
+      "specialties": ["Rice", "Indian food"]
+    },
+    "image": "market_asiansupermarket.jpg"
+  },
+  "3": {
+    "sid": "3",
+    "name": "Circle",
+    "location": {
+      "address": "Brusselsestraat 48, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Circle+Leuven"
+    },
+    "details": {
+      "rating": 4.5,
+      "opening_hours": "Mon–Sun 10:00–20:00",
+      "specialties": ["Asian grocery"]
+    },
+    "image": "market_circle.jpg"
+  },
+  "4": {
+    "sid": "4",
+    "name": "Asia & More",
+    "location": {
+      "address": "Aarschotsesteenweg 92, 3012 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Asia+%26+More+Leuven"
+    },
+    "details": {
+      "rating": 4.6,
+      "opening_hours": "Sun–Mon 13:00–19:00, Tue-Sat 9:00-19:00",
+      "specialties": ["Intant noodles", "Soy sauce"]
+    },
+    "image": "market_asiamore.jpg"
+  },
+  "5": {
+    "sid": "5",
+    "name": "Everest House",
+    "location": {
+      "address": "Brusselsestraat 128, 3000 Leuven",
+      "map_embed": "https://www.google.com/maps/embed/v1/place?key=YOUR_ACTUAL_API_KEY&q=Everest+House+Leuven"
+    },
+    "details": {
+      "rating": 4.5,
+      "opening_hours": "Mon–Sun 9:00–20:00",
+      "specialties": ["Indian spices"]
+    },
+    "image": "market_everesthouse.jpg"
+  }
+}

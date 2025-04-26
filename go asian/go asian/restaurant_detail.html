@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Go Asian</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
+        <li class="nav-item"><a class="nav-link" href="market.html">Supermarkets</a></li>
+        <li class="nav-item"><a class="nav-link" href="recipe.html">Recipes</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- 餐厅详情 -->
+<div class="container mt-4">
+  <div id="restaurant-detail">
+    <!-- 餐厅详细信息将通过 JS 动态加载 -->
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer class="bg-dark text-white text-center py-4">
+  <small>
+    <a href="legal.html#privacy" class="text-white me-2">Privacy Policy</a> |
+    <a href="legal.html#terms-sale" class="text-white mx-2">Terms of Sale</a> |
+    <a href="legal.html#terms-use" class="text-white mx-2">Website Terms of Use</a> |
+    <a href="legal.html#cookies" class="text-white mx-2">Cookies Policy</a>
+  </small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/renderRestaurantDetail.js"></script>
+</body>
+</html>
