@@ -2,49 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Go Asian - Legal Information</title>
+  <title>Go Asia - Legal Information</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- 导航栏（可选） -->
+<!-- 顶部导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Go Asian</a>
+    <a class="navbar-brand" href="index.html" style="color: #FFC107; font-family: 'Brush Script MT', cursive; font-size: 40px;">Go Asia</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="restaurant.html">Restaurants</a></li>
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="market.html">Supermarkets</a></li>
+        <li class="nav-item"><a class="nav-link custom-nav-link" href="recipe.html">Recipes</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <!-- Legal 内容主体 -->
 <div class="container py-5">
-  <h1 class="mb-4">Legal Information</h1>
+  <h1 class="mb-5 text-center">Legal Information</h1>
 
+  <!-- Privacy Policy -->
   <section id="privacy" class="mb-5">
-    <h3>Privacy Policy</h3>
-    <p>这里是你自己的隐私政策内容，可以写网站收集哪些数据、如何处理等。</p>
+    <h3 class="legal-title">Privacy Policy</h3>
+    <p>We are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website.</p>
+    <ul>
+      <li>We may collect personal information such as your name, email address, and preferences when you subscribe to our updates or contact us.</li>
+      <li>All collected data is used solely for providing and improving our services.</li>
+      <li>We do not share your personal information with third parties without your consent, except as required by law.</li>
+      <li>You have the right to access, correct, or delete your personal data by contacting us at <a href="mailto:team@goasian.be" class="custom-link">team@goasian.be</a>.</li>
+    </ul>
   </section>
 
+  <!-- Terms of Sale -->
   <section id="terms-sale" class="mb-5">
-    <h3>Terms of Sale</h3>
-    <p>销售条款，比如关于服务、价格变动、退款等。</p>
+    <h3 class="legal-title">Terms of Sale</h3>
+    <p>By purchasing any services or products through our website, you agree to the following terms:</p>
+    <ul>
+      <li>Prices are subject to change without prior notice.</li>
+      <li>All sales are final unless otherwise stated. Refunds may be issued at our sole discretion.</li>
+      <li>We reserve the right to refuse service to anyone for any reason at any time.</li>
+    </ul>
   </section>
 
+  <!-- Terms of Use -->
   <section id="terms-use" class="mb-5">
-    <h3>Website Terms of Use</h3>
-    <p>使用条款：用户访问网站的权利、限制、责任等。</p>
+    <h3 class="legal-title">Website Terms of Use</h3>
+    <p>By accessing and using this website, you accept and agree to be bound by the terms and provisions of this agreement:</p>
+    <ul>
+      <li>You must use the site for lawful purposes only.</li>
+      <li>Unauthorized use of this site may result in legal action.</li>
+      <li>We reserve the right to modify or discontinue any aspect of the site at any time.</li>
+    </ul>
   </section>
 
+  <!-- Cookies Policy -->
   <section id="cookies" class="mb-5">
-    <h3>Cookies Policy</h3>
-    <p>说明网站是否使用 cookie、目的以及如何管理 cookie 设置。</p>
+    <h3 class="legal-title">Cookies Policy</h3>
+    <p>Our website uses cookies to enhance your browsing experience:</p>
+    <ul>
+      <li>Cookies help us analyze web traffic and improve our website to better suit your needs.</li>
+      <li>You can choose to accept or decline cookies through your browser settings.</li>
+      <li>Disabling cookies may affect the functionality of the website.</li>
+    </ul>
   </section>
+</div>
 
 
-<!-- 页脚 -->
-<footer class="bg-dark text-white text-center py-4">
-  <small>© 2025 Go Asian. All rights reserved.</small>
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

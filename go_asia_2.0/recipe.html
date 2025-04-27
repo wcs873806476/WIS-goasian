@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Go Asian - Recipes</title>
+    <title>Go Asia - Recipes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -13,26 +13,24 @@
 <!-- 顶部导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Go Asian</a>
+        <a class="navbar-brand" href="index.html" style="color: #FFC107; font-family: 'Brush Script MT', cursive; font-size: 40px;">Go Asia</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="restaurant.html">Restaurants</a></li>
-                <li class="nav-item"><a class="nav-link" href="market.html">Supermarkets</a></li>
-                <li class="nav-item"><a class="nav-link active" href="recipe.html">Recipes</a></li>
+                <li class="nav-item"><a class="nav-link custom-nav-link" href="restaurant.html">Restaurants</a></li>
+                <li class="nav-item"><a class="nav-link custom-nav-link" href="market.html">Supermarkets</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 
-<!-- 页面标题 -->
-<header class="text-center py-5 bg-light">
+<!-- 菜谱页标题 -->
+<header class="page-header recipe-header text-center text-white d-flex align-items-center">
     <div class="container">
         <h1 class="display-5">Asian Recipes</h1>
-        <p class="lead">Discover the taste of Asia.</p>
     </div>
 </header>
 
@@ -58,27 +56,21 @@
 <!-- 增加空白间隔 -->
 <div class="my-5"></div>
 
-<!-- 三项并列区域 -->
-<section class="bg-light py-3">
+<!-- 两项并列区域 -->
+<section class="bg-light py-2">
     <div class="container">
-        <div class="row text-center">
+        <div class="row text-center justify-content-center">
 
             <!-- Follow us -->
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-md-6 mb-3 mb-md-0">
                 <h6 class="mb-2">Follow us</h6>
-                <a href="involve.html#follow" class="text-dark text-decoration-none">Please follow us</a>
+                <a href="involve.html#follow" class="custom-link">Please follow us</a>
             </div>
 
             <!-- Join us -->
-            <div class="col-md-4 mb-3 mb-md-0">
+            <div class="col-md-6 mb-3 mb-md-0">
                 <h6 class="mb-2">Join us</h6>
-                <a href="involve.html#join" class="text-dark text-decoration-none">Become a member</a>
-            </div>
-
-            <!-- Support us -->
-            <div class="col-md-4">
-                <h6 class="mb-2">Support us</h6>
-                <a href="involve.html#support" class="text-dark text-decoration-none">Ways to support</a>
+                <a href="involve.html#join" class="custom-link">Become a member</a>
             </div>
 
         </div>
@@ -89,12 +81,13 @@
 <!-- 页脚 -->
 <footer class="bg-dark text-white text-center py-4">
     <small>
-        <a href="legal.html#privacy" class="text-white me-2">Privacy Policy</a> |
-        <a href="legal.html#terms-sale" class="text-white mx-2">Terms of Sale</a> |
-        <a href="legal.html#terms-use" class="text-white mx-2">Website Terms of Use</a> |
-        <a href="legal.html#cookies" class="text-white mx-2">Cookies Policy</a>
+        <a href="legal.html#privacy" class="text-white me-2 text-decoration-none">Privacy Policy</a> |
+        <a href="legal.html#terms-sale" class="text-white mx-2 text-decoration-none">Terms of Sale</a> |
+        <a href="legal.html#terms-use" class="text-white mx-2 text-decoration-none">Website Terms of Use</a> |
+        <a href="legal.html#cookies" class="text-white mx-2 text-decoration-none">Cookies Policy</a>
     </small>
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
