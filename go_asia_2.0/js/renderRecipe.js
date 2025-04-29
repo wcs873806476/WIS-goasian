@@ -47,6 +47,8 @@ function renderRecipes(data) {
     rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3");
     container.appendChild(rowDiv);
 
+    const query = document.getElementById("searchInput").value.trim().toLowerCase(); // 获取当前搜索词
+
     // 8. 渲染每个菜谱的卡片
     data.forEach(recipe => {
         const recipeCard = document.createElement("div");
@@ -58,7 +60,7 @@ function renderRecipes(data) {
                     <img src="img/${recipe.image}" class="card-img-top" alt="${recipe.name}"
                     style="width: 100%; height: 200px; object-fit: cover;">
                     <div class="card-body text-center">
-                        <h5 class="card-title">${recipe.name}</h5>
+                        <h5 class="card-title">${highlightKeyword(recipe.name, query)}</h5>
                         <p class="text-muted">Click to see more details</p>
                         <a href="recipe_detail.html?id=${recipe.eid}" class="btn" style="background-color: #ff6600; color: white;">View Recipe</a>
                     </div>
@@ -68,4 +70,11 @@ function renderRecipes(data) {
 
         rowDiv.appendChild(recipeCard); // 将卡片添加到行容器中
     });
+}
+
+// 9. 高亮关键词
+function highlightKeyword(text, keyword) {
+    if (!keyword) return text;
+    const regex = new RegExp(`(${keyword})`, "gi");
+    return text.replace(regex, "<mark>$1</mark>");
 }
