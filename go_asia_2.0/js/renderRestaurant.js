@@ -1,89 +1,97 @@
-let restaurantData = []; // 保存原始数据，供搜索过滤使用
+let restaurantData = [];
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("data/restaurants.json")
         .then(response => response.json())
         .then(data => {
-            restaurantData = Object.values(data); // 存储数据到全局变量
-            renderRestaurants(restaurantData);     // 初始渲染所有餐厅
-        })
-        .catch(error => console.error("Error loading restaurant data:", error));
+            restaurantData = Object.values(data);
+            renderRestaurants(restaurantData, "", "name");
 
-    // 添加搜索监听器
-    const searchInput = document.getElementById("searchInput");
-    const searchCategory = document.getElementById("searchCategory");
+            const searchInput = document.getElementById("searchInput");
+            const searchCategory = document.getElementById("searchCategory");
 
-    // 监听搜索框的输入事件
-    if (searchInput) {
-        searchInput.addEventListener("input", function () {
-            const keyword = this.value.toLowerCase().trim();
-            const category = searchCategory.value;
+            searchInput.addEventListener("input", () => {
+                const query = searchInput.value.toLowerCase().trim();
+                const category = searchCategory.value;
 
-            const filtered = restaurantData.filter(restaurant => {
-                if (category === "name") {
-                    return restaurant.name.toLowerCase().includes(keyword);
-                } else if (category === "specialties") {
-                    return restaurant.details.specialties.some(spec =>
-                        spec.toLowerCase().includes(keyword)
-                    );
-                } else if (category === "location") {
-                    return restaurant.location.address.toLowerCase().includes(keyword);
-                }
-                return false;
+                const filtered = restaurantData.filter(restaurant => {
+                    if (category === "name") {
+                        return restaurant.name.toLowerCase().includes(query);
+                    } else if (category === "specialties") {
+                        return restaurant.details.specialties.some(spec =>
+                            spec.toLowerCase().includes(query)
+                        );
+                    } else if (category === "location") {
+                        return restaurant.location.address.toLowerCase().includes(query);
+                    }
+                    return false;
+                });
+
+                renderRestaurants(filtered, query, category);
             });
 
-            renderRestaurants(filtered); // 重新渲染筛选后的餐厅
-        });
-    }
-
-    // 当选择类别变化时，触发搜索框的输入事件
-    if (searchCategory) {
-        searchCategory.addEventListener("change", () => {
-            searchInput.dispatchEvent(new Event("input"));
-        });
-    }
+            searchCategory.addEventListener("change", () => {
+                searchInput.dispatchEvent(new Event("input"));
+            });
+        })
+        .catch(error => console.error("Error loading restaurant data:", error));
 });
 
-// 渲染餐厅列表
-function renderRestaurants(data) {
+// 渲染餐厅卡片
+function renderRestaurants(data, query = "", category = "name") {
     const container = document.getElementById("restaurant-list");
     container.innerHTML = "";
-
-    const rowDiv = document.createElement("div");
-    rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3");
-    container.appendChild(rowDiv);
 
     if (data.length === 0) {
         container.innerHTML = `<p class="text-center text-muted">No matching restaurants found.</p>`;
         return;
     }
 
+    const rowDiv = document.createElement("div");
+    rowDiv.classList.add("row", "row-cols-1", "row-cols-md-2", "g-3");
+    container.appendChild(rowDiv);
+
     data.forEach(restaurant => {
+        const name = highlight(restaurant.name, query, category === "name");
+        const specialties = restaurant.details.specialties
+            .map(spec => highlight(spec, query, category === "specialties"))
+            .join(", ");
+        const address = highlight(restaurant.location.address, query, category === "location");
+
         const restaurantCard = document.createElement("div");
         restaurantCard.classList.add("col");
 
-        // 渲染每个餐厅卡片
         restaurantCard.innerHTML = `
             <a href="restaurant_detail.html?id=${restaurant.rid}" class="text-decoration-none text-dark">
                 <div class="card h-100 d-flex flex-row" style="border-radius: 12px;">
                     <img src="img/${restaurant.image}" class="img-fluid rounded-start" alt="${restaurant.name}" 
-                    style="width: 150px; height: auto; object-fit: cover;">
+                        style="width: 150px; height: auto; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title">${highlightKeyword(restaurant.name)}</h5>
+                        <h5 class="card-title">${name}</h5>
                         ${renderGoogleStyleRating(restaurant.details.rating)}
-                        <p class="card-text">${highlightKeyword(restaurant.details.specialties.join(", "))}</p>
-                        <p class="text-muted">${highlightKeyword(restaurant.location.address)}</p>
+                        <p class="card-text">${specialties}</p>
+                        <p class="text-muted">${address}</p>
                         <p class="text-muted">${restaurant.details.opening_hours}</p>
                     </div>
                 </div>
             </a>
         `;
-
         rowDiv.appendChild(restaurantCard);
     });
 }
 
-// ⭐ 星级渲染函数
+// 高亮关键词函数（与市场页一致）
+function highlight(text, query, active) {
+    if (!active || !query) return text;
+    const regex = new RegExp(`(${escapeRegExp(query)})`, "gi");
+    return text.replace(regex, '<span class="bg-warning fw-semibold">$1</span>');
+}
+
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// 星级渲染
 function renderGoogleStyleRating(score) {
     const fullStar = '<i class="bi bi-star-fill text-warning"></i>';
     const halfStar = '<i class="bi bi-star-half text-warning"></i>';
@@ -111,13 +119,4 @@ function renderGoogleStyleRating(score) {
             <span>${stars}</span>
         </div>
     `;
-}
-
-// 高亮关键词函数
-function highlightKeyword(text) {
-    const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
-    if (!keyword) return text;
-
-    const regex = new RegExp(`(${keyword})`, 'gi');
-    return text.replace(regex, '<span class="bg-warning text-dark">$1</span>');
 }
