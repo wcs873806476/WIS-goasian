@@ -11,18 +11,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 添加搜索监听器
     const searchInput = document.getElementById("searchInput");
+    const searchCategory = document.getElementById("searchCategory");
+
+    // 监听搜索框的输入事件
     if (searchInput) {
         searchInput.addEventListener("input", function () {
             const keyword = this.value.toLowerCase().trim();
-            const filtered = restaurantData.filter(restaurant =>
-                restaurant.name.toLowerCase().includes(keyword) ||
-                restaurant.details.specialties.join(", ").toLowerCase().includes(keyword)
-            );
+            const category = searchCategory.value;
+
+            const filtered = restaurantData.filter(restaurant => {
+                if (category === "name") {
+                    return restaurant.name.toLowerCase().includes(keyword);
+                } else if (category === "specialties") {
+                    return restaurant.details.specialties.some(spec =>
+                        spec.toLowerCase().includes(keyword)
+                    );
+                } else if (category === "location") {
+                    return restaurant.location.address.toLowerCase().includes(keyword);
+                }
+                return false;
+            });
+
             renderRestaurants(filtered); // 重新渲染筛选后的餐厅
+        });
+    }
+
+    // 当选择类别变化时，触发搜索框的输入事件
+    if (searchCategory) {
+        searchCategory.addEventListener("change", () => {
+            searchInput.dispatchEvent(new Event("input"));
         });
     }
 });
 
+// 渲染餐厅列表
 function renderRestaurants(data) {
     const container = document.getElementById("restaurant-list");
     container.innerHTML = "";
@@ -40,16 +62,17 @@ function renderRestaurants(data) {
         const restaurantCard = document.createElement("div");
         restaurantCard.classList.add("col");
 
+        // 渲染每个餐厅卡片
         restaurantCard.innerHTML = `
             <a href="restaurant_detail.html?id=${restaurant.rid}" class="text-decoration-none text-dark">
                 <div class="card h-100 d-flex flex-row" style="border-radius: 12px;">
                     <img src="img/${restaurant.image}" class="img-fluid rounded-start" alt="${restaurant.name}" 
                     style="width: 150px; height: auto; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title">${restaurant.name}</h5>
+                        <h5 class="card-title">${highlightKeyword(restaurant.name)}</h5>
                         ${renderGoogleStyleRating(restaurant.details.rating)}
-                        <p class="card-text">${restaurant.details.specialties.join(", ")}</p>
-                        <p class="text-muted">${restaurant.location.address}</p>
+                        <p class="card-text">${highlightKeyword(restaurant.details.specialties.join(", "))}</p>
+                        <p class="text-muted">${highlightKeyword(restaurant.location.address)}</p>
                         <p class="text-muted">${restaurant.details.opening_hours}</p>
                     </div>
                 </div>
@@ -88,4 +111,13 @@ function renderGoogleStyleRating(score) {
             <span>${stars}</span>
         </div>
     `;
+}
+
+// 高亮关键词函数
+function highlightKeyword(text) {
+    const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
+    if (!keyword) return text;
+
+    const regex = new RegExp(`(${keyword})`, 'gi');
+    return text.replace(regex, '<span class="bg-warning text-dark">$1</span>');
 }
