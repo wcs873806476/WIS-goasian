@@ -36,8 +36,13 @@
 <!-- 搜索栏 -->
 <div class="container mt-4">
     <div class="input-group mb-3">
-        <span class="input-group-text"><i class="bi bi-search"></i></span> <!-- 放大镜图标 -->
-        <input type="text" id="searchInput" class="form-control" placeholder="Search markets..." aria-label="Search restaurants">
+        <select class="form-select flex-shrink-0" id="searchCategory" style="max-width: 150px;">
+            <option value="name">Name</option>
+            <option value="specialties">Specialties</option>
+            <option value="location">Location/Zip</option>
+        </select>
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" id="searchInput" class="form-control" placeholder="Search markets..." aria-label="Search markets">
     </div>
 </div>
 
