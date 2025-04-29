@@ -5,23 +5,41 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             allMarkets = Object.values(data);
-            renderMarkets(allMarkets);
+            renderMarkets(allMarkets, "", "name"); // 初始加载
 
             const searchInput = document.getElementById("searchInput");
+            const searchCategory = document.getElementById("searchCategory");
+
+            // 输入时搜索
             searchInput.addEventListener("input", () => {
                 const query = searchInput.value.toLowerCase();
-                const filtered = allMarkets.filter(market =>
-                    market.name.toLowerCase().includes(query) ||
-                    market.location.address.toLowerCase().includes(query) ||
-                    market.details.specialties.join(", ").toLowerCase().includes(query)
-                );
-                renderMarkets(filtered);
+                const category = searchCategory.value;
+
+                const filtered = allMarkets.filter(market => {
+                    if (category === "name") {
+                        return market.name.toLowerCase().includes(query);
+                    } else if (category === "specialties") {
+                        return market.details.specialties.some(spec =>
+                            spec.toLowerCase().includes(query)
+                        );
+                    } else if (category === "location") {
+                        return market.location.address.toLowerCase().includes(query);
+                    }
+                    return false;
+                });
+
+                renderMarkets(filtered, query, category);
+            });
+
+            // 切换搜索类别时自动搜索
+            searchCategory.addEventListener("change", () => {
+                searchInput.dispatchEvent(new Event("input"));
             });
         })
         .catch(error => console.error("Error loading market data:", error));
 });
 
-function renderMarkets(data) {
+function renderMarkets(data, query = "", category = "name") {
     const container = document.getElementById("market-list");
     const noResult = document.getElementById("no-result");
     container.innerHTML = "";
@@ -38,6 +56,12 @@ function renderMarkets(data) {
     container.appendChild(rowDiv);
 
     data.forEach(market => {
+        const name = highlight(market.name, query, category === "name");
+        const specialties = market.details.specialties
+            .map(spec => highlight(spec, query, category === "specialties"))
+            .join(", ");
+        const address = highlight(market.location.address, query, category === "location");
+
         const marketCard = document.createElement("div");
         marketCard.classList.add("col");
 
@@ -47,10 +71,10 @@ function renderMarkets(data) {
                     <img src="img/${market.image}" class="img-fluid rounded-start" alt="${market.name}" 
                          style="width: 150px; height: auto; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title">${market.name}</h5>
+                        <h5 class="card-title">${name}</h5>
                         ${renderGoogleStyleRating(market.details.rating)}
-                        <p class="card-text">${market.details.specialties.join(", ")}</p>
-                        <p class="text-muted">${market.location.address}</p>
+                        <p class="card-text">${specialties}</p>
+                        <p class="text-muted">${address}</p>
                         <p class="text-muted">${market.details.opening_hours}</p>
                     </div>
                 </div>
@@ -58,6 +82,17 @@ function renderMarkets(data) {
         `;
         rowDiv.appendChild(marketCard);
     });
+}
+
+// ⭐ 高亮关键词
+function highlight(text, query, active) {
+    if (!active || !query) return text;
+    const regex = new RegExp(`(${escapeRegExp(query)})`, "gi");
+    return text.replace(regex, '<span class="bg-warning fw-semibold">$1</span>');
+}
+
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function renderGoogleStyleRating(score) {
