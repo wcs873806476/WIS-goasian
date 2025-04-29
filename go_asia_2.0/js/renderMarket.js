@@ -84,11 +84,11 @@ function renderMarkets(data, query = "", category = "name") {
     });
 }
 
-// ⭐ 高亮关键词
+// ⭐ 高亮关键词（统一使用 <mark>）
 function highlight(text, query, active) {
     if (!active || !query) return text;
     const regex = new RegExp(`(${escapeRegExp(query)})`, "gi");
-    return text.replace(regex, '<span class="bg-warning fw-semibold">$1</span>');
+    return text.replace(regex, "<mark>$1</mark>");
 }
 
 function escapeRegExp(string) {
